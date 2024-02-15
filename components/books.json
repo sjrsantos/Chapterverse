@@ -1,0 +1,244 @@
+{
+  "books": [
+    {
+      "Book Title": "The Hunger Games",
+      "Id": 1,
+      "Category": "Dystopian",
+      "Description": "In a dystopian future, the totalitarian nation of Panem is divided into 12 districts and the Capitol. Each year, one boy and one girl from each district are selected by lottery to participate in the Hunger Games, a brutal and televised fight to the death. The story follows 16-year-old Katniss Everdeen, who volunteers to take her younger sister's place in the games.",
+      "Rating": 4.3,
+      "Image URL": "https://m.media-amazon.com/images/I/61+t8dh4BEL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Fault in Our Stars",
+      "Id": 2,
+      "Category": "Young Adult Fiction",
+      "Description": "This poignant novel explores the funny, thrilling, and tragic business of being alive and in love. It tells the story of Hazel Grace Lancaster, a sixteen-year-old cancer patient who is forced by her parents to attend a support group, where she subsequently meets and falls in love with Augustus Waters, an ex-basketball player and amputee.",
+      "Rating": 4.2,
+      "Image URL": "https://m.media-amazon.com/images/I/81a4kCNuH+L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Book Thief",
+      "Id": 3,
+      "Category": "Historical Fiction",
+      "Description": "Set in Nazi Germany, the novel is narrated by Death and follows a young girl named Liesel Meminger who steals books and shares them with her neighbors during bombing raids as well as with the Jewish man hidden in her basement.",
+      "Rating": 4.3,
+      "Image URL": "https://m.media-amazon.com/images/I/914h7ms4FXL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Giver",
+      "Id": 4,
+      "Category": "Dystopian",
+      "Description": "This novel is set in a society which at first appears to be a utopian society but is later revealed to be a dystopian one as the story progresses. The story centers on a young boy named Jonas, who is chosen to inherit the position of Receiver of Memory, the person who stores all the past memories of the time before Sameness, a plan that eradicated pain and strife by converting to 'Sameness', a plan that has also eradicated emotional depth from their lives.",
+      "Rating": 4.1,
+      "Image URL": "https://m.media-amazon.com/images/I/819XiIZg59L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Help",
+      "Id": 5,
+      "Category": "Historical Fiction",
+      "Description": "Set in the early 1960s in Jackson, Mississippi, the story is about African American maids working in white households. It's a period drama that explores the racial tensions of the time and tells a story of women from both sides of the social divide.",
+      "Rating": 4.2,
+      "Image URL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622355533i/4667024.jpg"
+    },
+    {
+      "Book Title": "The Outsiders",
+      "Id": 6,
+      "Category": "Coming-of-Age Fiction",
+      "Description": "This novel tells the story of two weeks in the life of a 14-year-old boy named Ponyboy Curtis and his struggles with right and wrong in a society in which he believes that he is an outsider.",
+      "Rating": 4.1,
+      "Image URL": "https://m.media-amazon.com/images/I/71gF5ocV6cL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Lightning Thief",
+      "Id": 7,
+      "Category": "Fantasy",
+      "Description": "This fantasy-adventure novel is based on Greek mythology. It follows Percy Jackson, a modern-day teenager who discovers he is a demigod and son of Poseidon. He is sent on a quest to prevent a war among the gods.",
+      "Rating": 4.2,
+      "Image URL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400602609i/28187.jpg"
+    },
+    {
+      "Book Title": "The Secret Life of Bees",
+      "Id": 8,
+      "Category": "Historical Fiction",
+      "Description": "Set in 1964, this novel tells the story of Lily Owens, whose life has been shaped around the blurred memory of the afternoon her mother was killed. She escapes her harsh life with her abusive father by running away with her caregiver, Rosaleen, to a town that holds the secret to her mother's past.",
+      "Rating": 4.1,
+      "Image URL": "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Secret_Life_of_Bees.jpg"
+    },
+    {
+      "Book Title": "Looking for Alaska",
+      "Id": 9,
+      "Category": "Young Adult Fiction",
+      "Description": "The novel follows the life of teenager Miles Halter as he enrolls in boarding school to try to gain a deeper perspective on life. He meets Alaska Young, and his life becomes an adventure of self-discovery and tragedy.",
+      "Rating": 4.1,
+      "Image URL": "https://i.ebayimg.com/images/g/RoQAAOSwTeNjRHyJ/s-l1200.webp"
+    },
+    {
+      "Book Title": "The Perks of Being a Wallflower",
+      "Id": 10,
+      "Category": "Young Adult Fiction",
+      "Description": "This coming-of-age novel is a story about what it's like to travel that strange course through the uncharted territory of high school. It's a tale of love, loss, fear, hope and the unforgettable friends that help us through life.",
+      "Rating": 4.2,
+      "Image URL": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471116148/the-perks-of-being-a-wallflower-ya-edition-9781471116148_hr.jpg"
+    },
+    {
+      "Book Title": "The Great Gatsby",
+      "Id": 11,
+      "Category": "Classic Literature",
+      "Description": "A classic piece of American literature, it is a story of passion, wealth, and tragedy, set against the backdrop of the roaring twenties. The novel follows the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.",
+      "Rating": 4.2,
+      "Image URL": "https://m.media-amazon.com/images/I/41XMaCHkrgL.jpg"
+    },
+    {
+      "Book Title": "1984",
+      "Id": 12,
+      "Category": "Dystopian",
+      "Description": " George Orwell's dystopian novel set in a totalitarian future where a regime controls every aspect of life, even people's thoughts. It tells the story of Winston Smith, a man who begins to question the system and tries to rebel against it.",
+      "Rating": 4.4,
+      "Image URL": "https://images.booksense.com/images/935/262/9780452262935.jpg"
+    },
+    {
+      "Book Title": "To Kill a Mockingbird",
+      "Id": 13,
+      "Category": "Classic American Literature",
+      "Description": "Set in the 1930s, this novel is renowned for its warmth and humor, despite dealing with serious issues of rape and racial inequality. The story is told through the eyes of Scout Finch, as her father, Atticus Finch, a lawyer, strives to prove the innocence of a black man unjustly accused of rape.",
+      "Rating": 4.3,
+      "Image URL": "https://m.media-amazon.com/images/I/51p12agL5LL.jpg"
+    },
+    {
+      "Book Title": "Pride and Prejudice",
+      "Id": 14,
+      "Category": "Romance",
+      "Description": "This novel, set in rural England in the early 19th century, follows the character development of Elizabeth Bennet, the witty and intelligent protagonist, and her relationship with Mr. Darcy, a wealthy but reserved gentleman.",
+      "Rating": 4.5,
+      "Image URL": "https://m.media-amazon.com/images/I/91vLVy3AQSL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Catcher in the Rye",
+      "Id": 15,
+      "Category": "Coming-of-Age Fiction",
+      "Description": " J.D. Salinger's novel is a classic coming-of-age story narrated by Holden Caulfield, a teenager from New York City, who is living in a boarding school and tells the story of his life after being expelled from prep school.",
+      "Rating": 3.9,
+      "Image URL": "https://m.media-amazon.com/images/I/51NtELEqgzS.jpg"
+    },
+    {
+      "Book Title": "The Hobbit",
+      "Id": 16,
+      "Category": "Fantasy",
+      "Description": "A fantasy novel that follows the quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug. Bilbo's journey takes him from light-hearted, rural surroundings into more sinister territory.",
+      "Rating": 4.7,
+      "Image URL": "https://m.media-amazon.com/images/I/A1E+USP9f8L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Diary of a Young Girl",
+      "Id": 17,
+      "Category": "Biography",
+      "Description": "Anne Frank's diary is a powerful memoir of her life during the Holocaust. While hiding from the Nazis, Anne recorded her experiences and hopes in her diary, offering a unique perspective on one of history's darkest times.",
+      "Rating": 4.3,
+      "Image URL": "https://m.media-amazon.com/images/I/51Eyjz65gyL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "Harry Potter and the Sorcerer's Stone",
+      "Id": 18,
+      "Category": "Fantasy",
+      "Description": "This is the first novel in the Harry Potter series and introduces Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry.",
+      "Rating": 4.7,
+      "Image URL": "https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "The Lord of the Rings",
+      "Id": 19,
+      "Category": "Epic Fantasy",
+      "Description": "An epic fantasy novel set in the world of Middle-earth, it follows the quest of the Fellowship of the Ring, which includes hobbits, elves, men, and a wizard, to destroy the One Ring before the dark lord Sauron can reclaim it.",
+      "Rating": 4.9,
+      "Image URL": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
+    },
+    {
+      "Book Title": "The Alchemist",
+      "Id": 20,
+      "Category": "Adventure Fiction",
+      "Description": "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found.",
+      "Rating": 4.2,
+      "Image URL": "https://m.media-amazon.com/images/I/51Z0nLAfLmL.jpg"
+    },
+    {
+      "Book Title": "The Lion, the Witch and the Wardrobe",
+      "Id": 21,
+      "Category": "Fantasy",
+      "Description": "This fantasy novel for children is the first published and best-known of C.S. Lewis's 'Chronicles of Narnia' series. It's the story of four children who visit the magical land of Narnia through a wardrobe.",
+      "Rating": 4.4,
+      "Image URL": "https://m.media-amazon.com/images/I/51hQ4EstmyL.jpg"
+    },
+    {
+      "Book Title": "Jane Eyre",
+      "Id": 22,
+      "Category": "Gothic Fiction",
+      "Description": " Charlotte Brontë's novel is a first-person narrative of the title character, a governess who develops a love for her brooding and mysterious employer, Mr. Rochester.",
+      "Rating": 4.1,
+      "Image URL": "https://cdn.kobo.com/book-images/df8380db-fd22-49b6-ad29-97ba56a5d7f6/1200/1200/False/jane-eyre-351.jpg"
+    },
+    {
+      "Book Title": "Brave New World",
+      "Id": 23,
+      "Category": "Dystopian",
+      "Description": "Aldous Huxley's novel presents an imagined future where life is painless but meaningless. It's a vision of a perfect society shadowed by a dystopian world.",
+      "Rating": 4.0,
+      "Image URL": "https://cdn.kobo.com/book-images/b75f696b-495b-45b7-b94d-dd6d1dfcf52d/1200/1200/False/brave-new-world-12.jpg"
+    },
+    {
+      "Book Title": "Animal Farm",
+      "Id": 24,
+      "Category": "Political Satire",
+      "Description": "George Orwell's satirical tale is an allegory of the Russian Revolution and the Soviet Union's rise to power. It is a commentary on the corrupting influence of power.",
+      "Rating": 3.8,
+      "Image URL": "https://m.media-amazon.com/images/I/91LUbAcpACL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Book Title": "A Tale of Two Cities",
+      "Id": 25,
+      "Category": "Historical Novel",
+      "Description": "Charles Dickens' novel is set in London and Paris before and during the French Revolution. It's a story of love and revolution.",
+      "Rating": 4.3,
+      "Image URL": "https://cdn.kobo.com/book-images/b6cc787d-79b3-4322-bfae-7bbf6ed59a77/1200/1200/False/a-tale-of-two-cities-431.jpg"
+    },
+    {
+      "Book Title": "The Picture of Dorian Gray",
+      "Id": 26,
+      "Category": "Philosophical Fiction",
+      "Description": " Oscar Wilde's only novel tells of a young man named Dorian Gray, the subject of a painting by artist Basil Hallward. Dorian sells his soul for eternal youth, leading him down a path of immorality and self-destruction.",
+      "Rating": 4.1,
+      "Image URL": "https://cdn.kobo.com/book-images/c37614a1-6c04-4f0c-94b4-11c45156022a/353/569/90/False/the-picture-of-dorian-gray-226.jpg"
+    },
+    {
+      "Book Title": "The Grapes of Wrath",
+      "Id": 27,
+      "Category": "Realist Novel",
+      "Description": "John Steinbeck's novel is a powerful and deeply affecting narrative of the Joad family's struggle to leave the Dust Bowl of Oklahoma for a better life in California during the Great Depression.",
+      "Rating": 4.2,
+      "Image URL": "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg"
+    },
+    {
+      "Book Title": "The Adventures of Huckleberry Finn",
+      "Id": 28,
+      "Category": "Picaresque Novel",
+      "Description": "Mark Twain's novel is often recognized as an American classic and is a direct sequel to The Adventures of Tom Sawyer. It is known for its colorful description of people and places along the Mississippi River.",
+      "Rating": 4.4,
+      "Image URL": "https://m.media-amazon.com/images/I/51E7yd+G-cL.jpg"
+    },
+    {
+      "Book Title": "Lord of the Flies",
+      "Id": 29,
+      "Category": "Allegorical Novel",
+      "Description": "William Golding's novel is about a group of British boys stranded on an uninhabited island and their disastrous attempt to govern themselves.",
+      "Rating": 3.9,
+      "Image URL": "https://i.ebayimg.com/images/g/EfAAAOSwv45kEy6I/s-l1200.webp"
+    },
+    {
+      "Book Title": "The Kite Runner",
+      "Id": 30,
+      "Category": "Historical Fiction",
+      "Description": "Khaled Hosseini's novel is a story of friendship and betrayal between two boys growing up in Kabul. Set against a backdrop that includes the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.",
+      "Rating": 4.3,
+      "Image URL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1579036753i/77203.jpg"
+    }
+  ]
+}

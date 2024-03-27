@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ImageBackground,
   View,
@@ -6,22 +6,57 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  FlatList,
+  ActivityIndicator,
 } from "react-native";
-import Carousel from "react-native-snap-carousel";
-import booksData from "../components/books.json";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
+import SearchBar from "../components/SearchBar";
 
 const BooksList = ({ navigation }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [books, setBooks] = useState([]);
+
+  const fetchBooks = async (searchTerm = "", category = "") => {
+    let url = `https://openlibrary.org/search.json?q=${encodeURIComponent(
+      searchTerm
+    )}`;
+    if (category) {
+      url += `&subject=${encodeURIComponent(category)}`;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(url);
+      const json = await response.json();
+      setBooks(json.docs); // Assume 'docs' contains the book data
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
   const renderBookItem = ({ item }) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("BookDetails", { bookId: item.Id })}
+        onPress={() => navigation.navigate("BookDetails", { book: item })}
         style={styles.bookItem}
       >
-        <Image source={{ uri: item["Image URL"] }} style={styles.bookImage} />
-        <Text style={styles.bookTitle}>{item["Book Title"]}</Text>
-        <Text style={styles.bookCategory}>{item.Category}</Text>
+        <Image
+          source={{
+            uri: `http://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`,
+          }}
+          style={styles.bookImage}
+        />
+        <Text style={styles.bookTitle}>{item.title}</Text>
+        <Text style={styles.bookCategory}>
+          {item.subject?.[0] || "General"}
+        </Text>
       </TouchableOpacity>
     );
   };
@@ -29,7 +64,6 @@ const BooksList = ({ navigation }) => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      // Optionally, navigate to the login screen or handle logged-out state
       navigation.navigate("UserLogin");
     } catch (error) {
       console.error("Error signing out: ", error);
@@ -42,13 +76,21 @@ const BooksList = ({ navigation }) => {
       style={styles.backgroundImage}
       resizeMode="cover"
     >
+      <SearchBar
+        style={styles.searchBar}
+        onSearch={(searchTerm, category) => fetchBooks(searchTerm, category)}
+      />
       <View style={styles.container}>
-        <Carousel
-          data={booksData.books}
-          renderItem={renderBookItem}
-          sliderWidth={300}
-          itemWidth={200}
-        />
+        {isLoading ? (
+          <ActivityIndicator size="large" color="#00ff00" />
+        ) : (
+          <FlatList
+            data={books}
+            renderItem={renderBookItem}
+            keyExtractor={(item, index) => item.key || index.toString()}
+            contentContainerStyle={styles.flatListContainer}
+          />
+        )}
         <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
           <Text style={styles.logoutButtonText}>Logout</Text>
         </TouchableOpacity>
@@ -69,45 +111,46 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.5)",
   },
+  flatListContainer: {
+    paddingBottom: 20, // Adjust as needed for padding at the bottom
+  },
   bookItem: {
     justifyContent: "center",
     alignItems: "center",
+    marginVertical: 10, // Space between items
   },
   bookImage: {
-    width: 200,
-    height: 300,
-    marginTop: "70%",
+    width: 150,
+    height: 220,
   },
   bookTitle: {
     fontWeight: "bold",
-    marginVertical: 10,
-    fontSize: 22,
+    fontSize: 18,
     textAlign: "center",
     color: "#fff",
-    textShadowColor: "rgba(0, 0, 0, 0.75)", // Black shadow color
-    textShadowOffset: { width: -1, height: 1 }, // Shadow offset
-    textShadowRadius: 2, // Shadow blur radius
+    marginTop: 10,
   },
   bookCategory: {
-    fontStyle: "italic",
-    fontSize: 18,
+    fontSize: 16,
     color: "#02fa30",
-    textShadowColor: "rgba(0, 0, 0, 0.9)", // Black shadow color
-    textShadowOffset: { width: -1, height: 1 }, // Shadow offset
-    textShadowRadius: 2, // Shadow blur radius
+    marginTop: 5,
   },
   logoutButton: {
     position: "absolute",
-    top: 40,
+    top: "80%",
     right: 30,
-    padding: 20, // Add padding for a larger touchable area
+    backgroundColor: "#000000a0", // Semi-transparent background
+    padding: 10,
+    borderRadius: 5, // Rounded corners
   },
   logoutButtonText: {
-    fontSize: 18, // Increased font size
-    color: "#fff", // White text color
-    textShadowColor: "rgba(0, 0, 0, 0.75)",
-    textShadowOffset: { width: -1, height: 1 },
-    textShadowRadius: 10,
+    fontSize: 18,
+    color: "#fff",
+  },
+  searchBar: {
+    marginTop: 50,
+    backgroundColor: "#fff",
+    color: "#000",
   },
 });
 

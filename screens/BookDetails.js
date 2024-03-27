@@ -1,34 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
-  ImageBackground,
   View,
   Text,
   Image,
+  ScrollView,
+  ActivityIndicator,
   StyleSheet,
+  ImageBackground,
   TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import booksData from "../components/books.json";
 
-const BookDetails = ({ navigation, route }) => {
-  const { bookId } = route.params;
-  const book = booksData.books.find((book) => book.Id === bookId);
+const BookDetails = ({ route }) => {
+  const { book } = route.params;
+  const [detailedBookInfo, setDetailedBookInfo] = useState(null);
 
-  if (!book) {
-    return (
-      <View style={styles.container}>
-        <Text>Book not found.</Text>
-      </View>
-    );
+  useEffect(() => {
+    const fetchBookDetails = async () => {
+      // Assuming 'book.key' contains the OLID needed for detailed search
+      // The key usually has a format like '/works/OL1234567W'
+      const bookDetailsUrl = `https://openlibrary.org${book.key}.json`;
+      try {
+        const response = await fetch(bookDetailsUrl);
+        const json = await response.json();
+        setDetailedBookInfo(json);
+      } catch (error) {
+        console.error("Error fetching book details:", error);
+      }
+    };
+
+    fetchBookDetails();
+  }, [book.key]); // Dependency to refetch if book changes
+
+  // Function to process and return the description
+  const renderDescription = (bookInfo) => {
+    if (!bookInfo || !bookInfo.description) return "Description not available.";
+
+    if (typeof bookInfo.description === "object") {
+      return bookInfo.description.value || "Description not available.";
+    }
+
+    return bookInfo.description;
+  };
+
+  if (!detailedBookInfo) {
+    return <ActivityIndicator style={{ flex: 1 }} />;
   }
-
-  const {
-    "Book Title": title,
-    Category: category,
-    Description: description,
-    Rating: rating,
-    "Image URL": imageUrl,
-  } = book;
 
   return (
     <ImageBackground
@@ -37,19 +54,27 @@ const BookDetails = ({ navigation, route }) => {
       resizeMode="cover"
     >
       <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
-          <Ionicons name="arrow-back" size={24} color="black" />
-        </TouchableOpacity>
-        <View style={styles.bookContainer}>
-          <Image source={{ uri: imageUrl }} style={styles.bookImage} />
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.category}>{category}</Text>
-          <Text style={styles.description}>{description}</Text>
-          <Text style={styles.rating}>Rating: {rating}</Text>
-        </View>
+        <ScrollView contentContainerStyle={{ padding: 20 }}>
+          <Image
+            source={{
+              uri: `http://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`,
+            }}
+            style={{ width: "100%", height: 300 }}
+            resizeMode="contain"
+          />
+          <Text style={{ marginTop: 20, fontSize: 22, fontWeight: "bold" }}>
+            {book.title}
+          </Text>
+          <>
+            <Text style={{ fontSize: 18, color: "#666" }}>
+              {book.author_name}
+            </Text>
+          </>
+          {/* Displays other book details */}
+          <Text style={{ marginTop: 20, fontSize: 16 }}>
+            {renderDescription(detailedBookInfo)}
+          </Text>
+        </ScrollView>
       </View>
     </ImageBackground>
   );
@@ -63,7 +88,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
   },
   backButton: {
     padding: 10,
@@ -103,14 +128,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: "#fff",
     textAlign: "justify",
-    textShadowColor: "rgba(0,0, 0, 0.75)", // Black shadow color
-    textShadowOffset: { width: -1, height: 1 }, // Shadow offset
-    textShadowRadius: 2, // Shadow blur radius
-  },
-  rating: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "#02fa30",
     textShadowColor: "rgba(0,0, 0, 0.75)", // Black shadow color
     textShadowOffset: { width: -1, height: 1 }, // Shadow offset
     textShadowRadius: 2, // Shadow blur radius

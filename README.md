@@ -8,6 +8,15 @@ Welcome to Chapterverse, an innovative platform designed to revolutionize the wa
 
 Chapterverse is a JavaScript-based application leveraging npm for efficient package management. Our goal is to offer an immersive, interactive experience, enabling users to explore various chapters of stories or educational courses seamlessly. Built upon React, our project integrates Firebase for authentication and database services, ensuring a robust and secure user experience.
 
+If you have EXPO GO installed in your device, you can use these QR Codes to run the app and try it yourself:
+
+iOS:
+![image](https://github.com/sjrsantos/Chapterverse/assets/80593793/a60687d5-e8e5-4d05-a7a9-18128836ff6a)
+
+Android:
+![image](https://github.com/sjrsantos/Chapterverse/assets/80593793/cda7f9c3-2c3d-4f79-8164-d84492d61bbd)
+
+
 ## Features
 
 - **Dynamic Story Exploration:** Navigate through a curated collection of stories and educational materials, each with detailed chapters and engaging content.
